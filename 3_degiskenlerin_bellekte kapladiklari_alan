@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int integardegiskeni;
+    float floatdegiskeni;
+    double doubledegiskeni;
+    char chardegiskeni;
+    short int shortSayi;
+    long int longSayi;
+    long long int longlongSayi;
+
+    printf("\n integar degiskeninin bellekte kapladığı alan = %lu byte", sizeof(integardegiskeni));
+    printf("\n float degiskeninin bellekte kapladığı alan = %lu byte", sizeof(floatdegiskeni));
+    printf("\n double degiskeninin bellekte kapladığı alan = %lu byte", sizeof(doubledegiskeni));
+    printf("\n char degiskeninin bellekte kapladığı alan = %lu byte", sizeof(chardegiskeni));
+
+    printf("\n short int degiskeninin bellekte kapladığı alan = %lu bit", 8*sizeof(shortSayi));
+    printf("\n long int degiskeninin bellekte kapladığı alan = %lu bit", 8*sizeof(longSayi));
+    printf("\n long long int degiskeninin bellekte kapladığı alan = %lu bit", 8*sizeof(longlongSayi));
+
+
+    return 0;
+}
