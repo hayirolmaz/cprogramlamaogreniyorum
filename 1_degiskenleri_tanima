@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main(){
+    // degiskeninTipi degiskeninAdi = degiskeninDegeri;
+    int sayi1=126;
+    int sayi2=126.2;
+    float sayi3=24.2;
+    float sayi4=24.242424;
+    double sayi5=32.56;
+    double sayi6=32.565656;
+    char harf1='T';
+    char harf2='TT';
+
+    printf("girilen degerler; \n sayi1=%d \n sayi2=%d \n sayi3=%f \n sayi4=%f \n sayi5=%lf \n sayi6=%lf \n harf1=%c \n harf2=%c \n", sayi1, sayi2, sayi3, sayi4, sayi5, sayi6, harf1, harf2);
+    printf("girilen degerlerin bellekteki adresleri; \n sayi1=%#X \n sayi2=%#X \n sayi3=%#X \n sayi4=%#X \n sayi5=%#X \n sayi6=%#X \n harf1=%#X \n harf2=%#X", &sayi1, &sayi2, &sayi3, &sayi4, &sayi5, &sayi6, &harf1, &harf2);
+
+    return 0;
+
+}
