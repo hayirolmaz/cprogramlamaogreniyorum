@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+
+    int decimalSayi=123456;
+
+    printf("Decimal tabanda 123456 olan sayinin hexadecimal tabanda karsiligi %X dir. \n",decimalSayi);//(123456) => (1 × 16⁵) + (2 × 16⁴) + (3 × 16³) + (4 × 16²) + (5 × 16¹) + (6 × 16⁰) = (1193046)
+    printf("Decimal tabanda 123456 olan sayinin octal tabanda karsiligi %o dir. \n",decimalSayi);//(123456) => (1 × 8⁵) + (2 × 8⁴) + (3 × 8³) + (4 × 8²) + (5 × 8¹) + (6 × 8⁰) = 361100
+    
+    return 0;
+
+}
