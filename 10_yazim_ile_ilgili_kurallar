@@ -2,19 +2,26 @@
 
 int main(){
 
-    printf("1- Benim adim Hayir Olmaz.\n");// \n satirlar arasina bir bosluk acar.
-    printf("2- Benim adim Hayir Olmaz.\n\n");// art arda kullanmaniz halinde kullandiginiz kadar satir bosluk birakir.
-    printf("3- Benim adim Hayir Olmaz.\n\n\n");
+    char kelime[] = "Hayir Olmaz";
+    printf("1- >>%30s<< \n", kelime);// %s formati stringler icin kullanılır. s'nin onune koydugumuz sayi kadar karakterlik alan ayrilir.
+    printf("2- <<%-20s>> \n",kelime);// String otomatik olarak saga dayalidir. Sola dayali olmasi icin '-' isareti kullanilmalidir.
+    printf("3- $- %*s -$ \n",20,kelime); // %*s ifadesini kullanarak * isaretine istedigimiz degeri atayabiliriz.
+    printf("4- *%.5s* \n",kelime); // Noktadan sonra yazilan sayi kadar karakterde alan ayrilir ve stringin sadece bu alana sıgan kismi yazilir.
+    printf("5- --%20.5s-- \n\n",kelime); // Noktadan onceki sayi kadar karakterde bosluk birakilir ardindan stringin noktadan sonra yazan sayi degeri kadar karakteri yazdirilir.
 
-    printf("4- İsim: Hayir Olmaz \t Yas: 404 \t Meslek: Ogrenci\n\n");// '\t' bir tab kadar bosluk birakir.Ozellikle tablo olusturmada kullanilir.
+    printf("6- Benim adim Hayir Olmaz.\n");// \n satirlar arasina bir bosluk acar.
+    printf("7- Benim adim Hayir Olmaz.\n\n");// art arda kullanmaniz halinde kullandiginiz kadar satir bosluk birakir.
+    printf("8- Benim adim Hayir Olmaz.\n\n\n");
 
-    printf("5- Hayir   \b    Olmaz\n");// '\b' bir boslugu siler. Bir bosluk geriye ceker.
-    printf("6- Hayir \bOlmaz\n");
-    printf("7- Hayir\bOlmaz\n\n");// Eger bosluk kalmamissa bir onceki harfi siler.
+    printf("9- İsim: Hayir Olmaz \t Yas: 404 \t Meslek: Ogrenci\n\n");// '\t' bir tab kadar bosluk birakir.Ozellikle tablo olusturmada kullanilir.
 
-    printf("7- \"Hayir Olmaz\"\n");// Cift tirnak icerisinde cift tirnak kullanmak icin \ isaretinden faydalanir.
-    printf("8- Hayir\ Olmaz \n"); // '\' isaretini bir kere yazdigimizda ciktisini alamayiz.
-    printf("9- Hayir \\ Olmaz \n"); // '\\' yazdigimizda ise cikti olarak '\' alabiliriz.
+    printf("10- Hayir   \b    Olmaz\n");// '\b' bir boslugu siler. Bir bosluk geriye ceker.
+    printf("11- Hayir \bOlmaz\n");
+    printf("12- Hayir\bOlmaz\n\n");// Eger bosluk kalmamissa bir onceki harfi siler.
+
+    printf("13-\"Hayir Olmaz\"\n");// Cift tirnak icerisinde cift tirnak kullanmak icin \ isaretinden faydalanir.
+    printf("14- Hayir\ Olmaz \n"); // '\' isaretini bir kere yazdigimizda ciktisini alamayiz.
+    printf("15- Hayir \\ Olmaz \n"); // '\\' yazdigimizda ise cikti olarak '\' alabiliriz.
 
     return 0;
 }
