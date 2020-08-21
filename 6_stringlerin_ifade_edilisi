@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+    
+    /* Stringler, boyutlu arrayler olarak veya pointerlardan yararlanarak ifade edilir. */
+
+    char isim1[100] = "Hayir Olmaz";
+    char isim2[100] = {'H','a','y','i','r',' ','O','l','m','a','z'};
+    char *isim3 = "Hayir Olmaz";
+
+    printf("\n isim1=%s", isim1);
+    printf("\n isim2=%s", isim2);
+    printf("\n isim3=%s", isim3);
+    
+    return 0;
+}
