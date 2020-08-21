@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+
+    printf("1- Benim adim Hayir Olmaz.\n");// \n satirlar arasina bir bosluk acar.
+    printf("2- Benim adim Hayir Olmaz.\n\n");// art arda kullanmaniz halinde kullandiginiz kadar satir bosluk birakir.
+    printf("3- Benim adim Hayir Olmaz.\n\n\n");
+
+    printf("4- İsim: Hayir Olmaz \t Yas: 404 \t Meslek: Ogrenci\n\n");// '\t' bir tab kadar bosluk birakir.Ozellikle tablo olusturmada kullanilir.
+
+    printf("5- Hayir   \b    Olmaz\n");// '\b' bir boslugu siler. Bir bosluk geriye ceker.
+    printf("6- Hayir \bOlmaz\n");
+    printf("7- Hayir\bOlmaz\n\n");// Eger bosluk kalmamissa bir onceki harfi siler.
+
+    printf("7- \"Hayir Olmaz\"\n");// Cift tirnak icerisinde cift tirnak kullanmak icin \ isaretinden faydalanir.
+    printf("8- Hayir\ Olmaz \n"); // '\' isaretini bir kere yazdigimizda ciktisini alamayiz.
+    printf("9- Hayir \\ Olmaz \n"); // '\\' yazdigimizda ise cikti olarak '\' alabiliriz.
+
+    return 0;
+}
