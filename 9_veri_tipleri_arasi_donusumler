@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+    int intSayi = 3.123;
+    float floatSayi = 5.123456789;
+    double doubleSayi = 12.123456789123456789;
+
+    printf("int deger = %d \n",intSayi);
+    printf("float deger = %f \n",floatSayi);
+    printf("double deger = %lf \n\n",doubleSayi);
+
+    printf("basamak sayisi belirtilerek int deger = %.6d \n",intSayi);
+    printf("basamak sayisi belirtilerek float deger = %.9f \n",floatSayi);//float virgulden sonra sadece ilk 6 basamak icin kesinlik verebilir.
+    printf("basamak sayisi belirtilerek double deger = %.18lf \n\n",doubleSayi);// double virgulden sonra sadece ilk 10 basamak icin kesinlik verebilir.
+
+    int sayiDonusum =  (int)floatSayi;
+    printf("float degerinin int'e donusturulmus hali = %d \n", sayiDonusum);
+
+    float sayiDonusum2 = (float)sayiDonusum;
+    printf("float degerinin int'ten sonra tekrar float'a  donusturulmus hali = %f \n\n", sayiDonusum2);
+
+    char karakterDizisi[] = "1234.1234"; //string ifade tanimlanir.
+    int tamSayi;
+    float ondalikliSayi;
+
+    tamSayi=atoi(karakterDizisi); //string ifadeyi bir integer degerine donustururuz.
+    ondalikliSayi=atof(karakterDizisi); //string bir ifadeyi float degerine donustururuz.
+
+    printf("string'in tam sayiya cevrilmis hali = %d \n",tamSayi);
+    printf("string'in ondalikli sayiya cevrilmis hali = %.4f",ondalikliSayi);
+
+    return 0;
+}
