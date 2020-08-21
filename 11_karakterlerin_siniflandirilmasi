@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main(){
+
+    char karakter = 'h';
+    char karakter1 = 'hh';
+
+    /* Bu kisimdaki islevler karakterin belli bir grupa uye olup olmadiginin sinamasini yapar
+     * İslevlerin ismi 'is' ile baslar
+     * 0 donmesi halinde yanlıs, 0 harici bir sayi dönmesi halinde dogru oldugunu anlariz */
+
+    printf("'A' karakteri icin isalnum sonucu : %d \n", isalnum('A')); // isalnum harf ya da rakam sinamasi yapar.
+    printf("'9' rakami icin isalnum sonucu : %d \n", isalnum('9'));
+    printf("9 rakami icin (tirnak kullanmadan) isalnum sonucu : %d \n", isalnum(9)); // tirnak icinde yazilmamis rakamlar ve harfler 0 doner.
+    printf("'$' isareti icin isalnum sonucu: %d \n\n", isalnum('$'));
+
+    printf("'h' icin isalpha sonucu : %d \n",isalpha(karakter)); // isalpha harf sinamasi yapar.
+    printf("'hh' icin isalpha sonucu : %d \n",isalpha(karakter1)); // parantez icine tanimladigimiz bir degiskeni cagırabilegimiz gibi tanimlama yapmadan da sinama yapabiliriz.
+    printf("'5' icin isalpha sonucu : %d \n\n",isalpha('5'));
+
+    printf("'H' harfi icin islower sonucu : %d \n", islower('H')); // islower harfin küçük olmadigi durumlarda 0 doner.
+    printf("'h' harfi icin islower sonucu : %d \n", islower('h'));
+    printf("'H' harfi icin isupper sonucu : %d \n", isupper('H')); // isupper harfin büyük olmadigi durumlarda 0 doner.
+    printf("'h' harfi icin isupper sonucu : %d \n\n", isupper('h'));
+
+    printf("'H' icin tolower sonucu : %c \n", tolower('H')); // tolower buyuk harfi kuculterek sonuc verir.
+    printf("'h' icin toupper sonucu : %c \n\n", toupper('h')); // toupper kucuk harfi buyulterek sonuc verir.
+
+    printf("'5' rakami icin isdigit sonucu : %d \n",isdigit('5'));  // isdigit rakam sinamasi yapar.
+    printf("5 rakami icin (tirnak kullanmadan) isdigit sonucu : %d \n",isdigit(5));
+    printf("'h' icin isdigit sonucu : %d \n\n",isdigit(karakter));
+
+    printf("'.' icin ispunct sonucu : %d \n", ispunct('.')); // ispunct noktalama isaretleri icin 0 harici bir sayi doner.
+    printf("'[' icin ispunct sonucu : %d \n\n", ispunct('['));
+
+    printf("' ' bosluk icin isspace sonucu : %d \n", isspace(' ')); // isspace bosluk olmasi halinde 0 harici bir sayi doner.
+    printf("'\\n' bosluk icin isspace sonucu : %d \n", isspace('\n')); // ' ' , '\f' , '\n' , '\r' , '\t' , '\v' gibi ifadelerin cıktısı 0 harici bir sayidir.
+
+
+    return 0;
+}
