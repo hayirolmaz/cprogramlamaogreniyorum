@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    char harf1='H';
+    char harf2=104;
+    char harf3=97;
+
+    /* ASCII tablosuna göre değerler;*/
+
+    printf("harf1 degiskeninin karakter degeri:%c \n", harf1);
+    printf("harf1 degiskeninin decimal degeri:%d \n", harf1);
+    printf("harf1 degiskeninin hexadecimal degeri:%X \n\n", harf1);
+
+    printf("harf2 degiskeninin karakter degeri:%c \n", harf2);
+    printf("harf2 degiskeninin decimal degeri:%d \n", harf2);
+    printf("harf1 degiskeninin hexadecimal degeri:%X \n\n", harf2);
+
+    printf("harf3 degiskeninin karakter degeri:%c \n", harf3);
+    printf("harf3 degiskeninin decimal degeri:%d \n", harf3);
+    printf("harf1 degiskeninin hexadecimal degeri:%X \n\n", harf3);
+
+    /*Bir harfin kucuk ya da buyuk olusu, kucukten buyuge donusturulmesi, sayi olup olmadiginin kontrolu gibi islemler ASCII tablosundan faydalanarak yapilir.
+     * Decimal olarak A-a=32 dir ve bu diger harfler icinde gecerlidir.
+     * Decimal olarak 48-57 aralıgı char olarak 0-9 araligini kapsar. */
+
+    return 0;
+}
