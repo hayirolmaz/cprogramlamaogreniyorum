@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+
+    float sayi=12.12345600000;
+
+    printf("floatsayi'nin degeri = %f \n",sayi);
+    printf("sayinin bilimsel gosterimi = %e \n",sayi);
+    printf("sayinin bilimsel gosterimi = %E \n",sayi);
+    printf("sayinin gosterilebilecek en kisa hali = %g \n",sayi); // %g ve %G sayinin normal ve bilimsel hali arasindan en kisa olani secer.
+    printf("sayinin gosterilebilecek en kisa hali = %G",sayi);
+
+    return 0;
+
+}
