@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main(){
+
+    int bit1 = 64;
+
+    /* 64 = 0100 0000 icin;
+     * Bir birim sola kaydirilmis hali = 1000 0000
+     * Bir birim saga kaydirilmis hali = 0010 0000 seklinde yazilir. */
+
+    printf("Decimal olarak %d'e esit olan sayinin bit duzeyinde sola kaydirilmis hali; %d'ye esittir. \n",bit1,bit1<<1); //Sayiyi 2 ile carpar.
+    printf("Decimal olarak %d'e esit olan sayinin bit duzeyinde saga kaydirilmis hali; %d'ye esittir. \n",bit1,bit1>>1); //Sayiyi 2'ye boler.
+
+    int bit2 = 61;
+    int bit3 = 15;
+
+    /* 0011 1101 = 61
+     * 0000 1111 = 15
+     * 0000 1101 = 13
+     * AND (ve) baglacının 1 dongusu vermesi icin alt alta gelen sayilarin ikisinin de 1 olmasi gerekir. */
+
+    printf("Decimal olarak (%d)&(%d) seklinde yazilan islemin bit duzeyinde sonucu = %d \n",bit2,bit3,bit2 & bit3);
+
+    /* 0011 1101 = 61
+     * 0000 1111 = 15
+     * 0011 1111 = 63
+     * OR (veya) baglacının 1 dongusu vermesi icin alt alta gelen sayilardan sadece birinin 1 olmasi yeterlidir. */
+
+    printf("Decimal olarak (%d)|(%d) seklinde yazilan islemin bit duzeyinde sonucu = %d \n",bit2,bit3,bit2 | bit3);
+
+    unsigned char bit4 = 64; // 64 = 0100 0000
+    unsigned char tumleyen = ~bit4; // 191 = 1011 1111
+
+    /* unsigned char 0 ile 255 arasinda deger alabilir.
+     * 255 = 1111 1111'dir ve 1111 1111 sayisi 8 bit ile ifade edilebilecek en buyuk sayidir.
+     * Complement (tumleme) operatoru 8 bitlik bir sayida; 0'lari 1'e, 1'leri 0'a cevirerek sonuc verir.
+     * Sayi ve sayinin tumlenmis halinin toplami 255 eder. */
+
+    printf("~%d isleminin sonucu = %d \n",bit4,tumleyen);
+
+    return 0;
+}
