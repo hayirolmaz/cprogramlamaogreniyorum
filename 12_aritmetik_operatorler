@@ -1,5 +1,3 @@
-//aritmetik operaratorler
-
 #include <stdio.h>
 
 int main(){
