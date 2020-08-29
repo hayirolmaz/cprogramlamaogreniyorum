@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+    int x = 6, y = 12;
+
+    printf("%d > %d isleminin iliskisel sonucu (0 ya da 1) = %d \n",x,y,x>y); //buyuktur operatoru
+    printf("%d < %d isleminin iliskisel sonucu (0 ya da 1) = %d \n",x,y,x<y); //kucuktur operatoru
+    printf("%d >= %d isleminin iliskisel sonucu (0 ya da 1) = %d \n",x,y,x>=y); //buyuk esittir operatoru
+    printf("%d <= %d isleminin iliskisel sonucu (0 ya da 1) = %d \n",x,y,x<=y); //kucuk esittir operatoru
+    printf("%d = %d isleminini liskisel sonucu (0 ya da 1) = %d \n",x,y,x==y); //esittir operatoru
+    printf("%d != %d isleminin iliskisel sonucu (0 ya da 1) = %d \n",x,y,x!=y); //esit degildir operatoru
+
+    return 0;
+}
