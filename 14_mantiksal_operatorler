@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int x = 6, y = 12, z = 18;
+
+    printf("(%d>%d)ve(%d>%d) onermesinin sonucu (0 ya da 1) = %d \n", y, x, z, y,(y > x) && (z > y)); // '&&' isareti AND (ve) operatorudur.
+    printf("(%d>%d)ve(%d>%d) onermesinin sonucu (0 ya da 1) = %d \n", x, y, z, y,(x > y) && (z > y)); // Sadece iki kosulunda 1 oldugu durumlarda 1 cıktısı verir.
+    printf("(%d>%d)veya(%d>%d) onermesinin sonucu (0 ya da 1) = %d \n", y, x, y, z,(y > x) || (y > z)); // '||' isareti OR (veya) operatorudur.
+    printf("(%d>%d)veya(%d>%d) onermesinin sonucu (0 ya da 1) = %d \n", x, y, y, z,(x > y) || (y > z)); // Iki kosuldan en az birinin 1 oldugu durumlarda 1 cıktısı verir.
+    printf("(%d>%d)ya da(%d>%d) onermesinin sonucu (0 ya da 1) = %d \n", x, y, z, y,(x > y) ^ (z > y)); // '^' ifadesi XOR (ya da) operatorudur.
+    printf("(%d>%d)ya da(%d>%d) onermesinin sonucu (0 ya da 1) = %d \n", y, x, z, y,(y > x) ^ (z > y)); // Iki kosulun birinin 1 digerinin 0 oldugu durumlarda 1 cıktısı verir.
+    printf("(%d>%d) onermesinin degili (0 ya da 1) = %d \n", x, y, !(x > y)); // '!' isareti NOT (degil) operatorudur.
+    printf("(%d>%d) onermesinin degili (0 ya da 1) = %d \n", y, z, !(y > z)); // onermenin sonucunun tam tersi cıktısını verir.
+
+    return 0;
+}
