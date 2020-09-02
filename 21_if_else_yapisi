@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(int argc, char **argv) {
+    int sayi1,sayi2;
+    float sonuc;
+    char ch;
+
+    printf("Lutfen sirasiyla iki adet sayi giriniz; \t");
+    scanf("%d%d",&sayi1,&sayi2);
+    printf("Lutfen yapmak istediginiz islemi giriniz(+,-,*,/):");
+    fflush(stdin);// Bufferi temizlemek icin kullanir. Linux isletim sisteminde calismayabilir.
+    scanf(" %c",&ch);// Linux'ta bunun yerine % isaretinden once bir bosluk birakilir.
+    if(ch=='+'){
+        sonuc=sayi1+sayi2;
+        printf("%d + %d isleminin sonucu : %.2f'dir.\n",sayi1,sayi2,sonuc);
+    }
+    else if(ch=='-'){
+        sonuc=sayi1-sayi2;
+        printf("%d / %d isleminin sonucu : %.2f'dir.\n",sayi1,sayi2,sonuc);
+    }
+    else if(ch=='*'){
+        sonuc=sayi1*sayi2;
+        printf("%d * %d isleminin sonucu : %.2f'dir.\n",sayi1,sayi2,sonuc);
+    }
+    else if(ch=='/'){
+        sonuc=sayi1/sayi2;
+        printf("%d / %d isleminin sonucu : %.2f'dir.\n",sayi1,sayi2,sonuc);
+    }
+    else{
+        printf("Hatali giris yaptiniz.\n");
+    }
+    return 0;
+}
+
