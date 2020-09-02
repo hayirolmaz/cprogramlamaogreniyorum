@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(int argc, char **argv) {
+
+    int delta;
+    int a,b,c;
+
+    printf("Lütfen ax^2+bx+c denklemi icin a,b,c değerlerini giriniz; \t");
+    scanf("%d%d%d",&a,&b,&c);
+    delta = pow(b,2)-(4*a*c); // pow fonksiyonu belirtilen sayinin, belirtilen kuvvetini alir.
+    printf("Girdiginiz degerler icin delta = %d \n",delta);
+    printf("Girdiginiz degerler icin delta sorgu sonucu (0 ya da 1) = %d",delta>=0);
+    return 0;
+}
