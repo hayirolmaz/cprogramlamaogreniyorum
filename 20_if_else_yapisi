@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int main(int argc, char **argv) {
+    float kullaniciMiktar=0, kullaniciBakiye=5000, gunlukLimit=500;
+    int islem;
+
+    printf("\t HOSGELDINIZ \n");
+    printf("\t Para yatirmak icin [1], para cekmek icin [2], bakiyenizi gormek icin [3] tuslayiniz. \n");
+    scanf("%d",&islem);
+
+    if(islem==1){
+        printf("\t Lutfen yatirmak istediginiz miktari giriniz. \n");
+        scanf("%f",&kullaniciMiktar);
+        if(kullaniciMiktar==0) {
+            printf("\t Lutfen 5 saniye icerisinde islem yapiniz.");
+            sleep(5);
+            scanf("%f",&kullaniciMiktar);
+        }
+        kullaniciBakiye+=kullaniciMiktar;
+        printf("\t Isleminiz basariyla gerceklesmistir. Tesekkur ederiz. \n");
+        printf("\t Yeni bakiyeniz = %.2f",kullaniciBakiye);
+    }
+    else if (islem==2){
+        printf("\t Lutfen cekmek istediginiz miktari giriniz. \n");
+        scanf("%f",&kullaniciMiktar);
+        if(kullaniciBakiye<kullaniciMiktar){
+            printf("\t Bakiyeniz yeterli degildir. Islem gerceklestirilemedi. \n");
+        }
+        else if (gunlukLimit<kullaniciMiktar) {
+            printf("\t Gunluk para cekim limitini astiniz. Islem gerceklestirilemedi. \n");
+        }
+        else if (kullaniciMiktar==0){
+            printf("\t Lutfen 5 saniye icerisinde islem yapiniz.");
+            sleep(5);
+            scanf("%f",&kullaniciMiktar);
+            kullaniciBakiye-=kullaniciMiktar;
+            printf("\t Yeni bakiyeniz = %.2f",kullaniciBakiye);
+        }
+        else{
+            kullaniciBakiye-=kullaniciMiktar;
+            printf("\t Isleminiz basariyla gerceklesmistir. Tesekkur ederiz. \n");
+            printf("\t Yeni bakiyeniz = %.2f",kullaniciBakiye);
+        }
+    }
+    else if (islem==3){
+        printf("Bakiyeniz = %.2f . Iyi gunler dileriz.",kullaniciBakiye);
+    }
+    else {
+        printf("Gecersiz bir giris yaptiniz. Islem gerceklestirilemedi.");
+    }
+
+    return 0;
+}
