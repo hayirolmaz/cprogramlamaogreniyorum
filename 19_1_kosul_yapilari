@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv) {
+
+    int x,y,z;
+
+    printf("Ucgenin uc kenari olacak sekilde x, y ve z degerleri giriniz; \t");
+    scanf("%d%d%d",&x,&y,&z);
+    printf("Ucgen kenar bilgileri; x=%d y=%d z=%d \n",x,y,z);
+
+    if(abs(y-z)<x && x<y+z){
+        if(abs(x-z)<y && y<x+z){
+            if(abs(y-x)<z && z<x+y){
+                printf("Girdiginiz kenar bilgilerine gore bir ucgen olusturulabilir.\n");
+            }
+            else{
+                printf("Z kenari ucgen olusumunu engelliyor.\n");
+            }
+        }
+        else{
+            printf("Y kenari ucgen olusumunu engelliyor.\n");
+        }
+    }
+    else{
+        printf("X kenari ucgen olusumunu engelliyor.\n");
+    }
+
+    return 0;
+
+}
