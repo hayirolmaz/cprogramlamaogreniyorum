@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(int argc, char **argv) {
+
+    float sinavNotu=0;
+    printf("\t Lutfen sinav notunuzu giriniz. \n");
+    scanf("%f",&sinavNotu);
+
+    if(0>sinavNotu || sinavNotu>100){
+        printf("Girdiginiz sinav notu [0-100] araliginda olmalidir.");
+    }
+    else if (sinavNotu>=92) {
+        printf("Harf notunuz = AA");
+    }
+    else if(sinavNotu>=85){
+        printf("Harf notunuz = BA");
+    }
+    else if(sinavNotu>=80){
+        printf("Harf notunuz = BB");
+    }
+    else if(sinavNotu>=75){
+        printf("Harf notunuz = CB");
+    }
+    else if(sinavNotu>=67){
+        printf("Harf notunuz = CC");
+    }
+    else if(sinavNotu>=58){
+        printf("Harf notunuz = DC");
+    }
+    else if(sinavNotu>=50){
+        printf("Harf notunuz = DD");
+    }
+    else{
+        printf("Harf notunuz = FF");
+    }
+    return 0;
+}
