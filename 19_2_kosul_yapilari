@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(int argc, char **argv) {
+
+    int fiyatTutari, taksitMiktari;
+    char kullaniciCevabi;
+    srand(time(NULL));
+    fiyatTutari = rand() % 5000;
+    printf("\t HOSGELDINIZ. \n");
+    printf("\t Alisveris tutariniz %d'ye esittir. \n", fiyatTutari);
+    printf("\t Taksit ister misiniz? [ E - H ] \n");
+    scanf("%c",&kullaniciCevabi);
+
+    if (kullaniciCevabi == 'E') {
+        printf("Kac taksit uygulanmasini istersiniz? [ 3 - 6 - 9 ]");
+        scanf("%d",&taksitMiktari);
+        switch (taksitMiktari) {
+            case 3:
+                fiyatTutari += fiyatTutari * 0.03;
+                printf("%d taksitle odemeyi sectiniz. Odemeniz gereken tutar = %d \n", taksitMiktari, fiyatTutari);
+                break;
+            case 6:
+                fiyatTutari += fiyatTutari * 0.06;
+                printf("%d taksitle odemeyi sectiniz. Odemeniz gereken tutar = %d \n", taksitMiktari, fiyatTutari);
+                break;
+            case 9:
+                fiyatTutari += fiyatTutari * 0.09;
+                printf("%d taksitle odemeyi sectiniz. Odemeniz gereken tutar = %d \n", taksitMiktari, fiyatTutari);
+                break;
+            default:
+                printf("Gecersiz bir taksit tutari girdiniz. \n");
+        }
+    } 
+    
+    else {
+        printf("Herhangi bir taksit uygulanmadi.\n");
+    }
+
+    printf("Ozel alisveris kartiniz var mi? ( E - H ) \n");
+    scanf(" %c",&kullaniciCevabi);
+    if (kullaniciCevabi == 'E') {
+        fiyatTutari -= fiyatTutari * 0.05;
+        printf("Yuzde bes indiriminiz uygulaniyor. \n");
+        sleep(2);
+    } 
+    else {
+        printf("Herhangi bir indirim uygulanmadi. \n");
+    }
+    printf("Alisveris sonucu odemeniz gereken tutar = %d", fiyatTutari);
+
+    return 0;
+}
