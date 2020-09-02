@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(int argc, char** argv){
+    int sayi1, sayi2;
+    srand(time(NULL)); // Atanan sayinin her seferinde farkli olmasini saglar.
+    sayi1=rand()%100; // sayi1'e 0 ile 100 arasi bir sayi atar.
+    sayi2=rand()%100;
+    printf("Birinci Sayi = %d ve Ikinci Sayi = %d \n",sayi1,sayi2);
+
+    if(sayi1>sayi2) {
+        printf("%d degeri %d degerinden buyuktur. \n", sayi1, sayi2);
+    }
+    
+    else if (sayi1==sayi2)
+        printf("%d degeri %d degerine esittir. \n",sayi1,sayi2); //if komutlarinda sadece bir satir yazacaksak {} isaretleri kullanmayabiliriz.
+
+    else{
+        printf("%d degeri %d degerinden kucuktur. \n",sayi1,sayi2);
+    }
+
+    return 0;
+}
