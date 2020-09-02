@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(int argc, char**argv){
+    int sayi,sayi2;
+
+    printf("Bir 3 basamakli bir sayi giriniz; \t");
+    scanf("%d",&sayi);
+
+    printf("Girdiginiz sayinin tersten yazilmis hali; \t");
+    sayi2 = sayi;
+    printf("%d",sayi2%10);
+    sayi2/= 10;
+    printf("%d",sayi2%10);
+    sayi2/= 10;
+    printf("%d",sayi2%10);
+    
+    return 0;
+}
