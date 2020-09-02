@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main (int argc, char** argv){
+
+    int haftaninGunu;
+    printf("Lutfen haftanin, [1-7] araligina tekabul eden gun degerini giriniz:");
+    scanf("%d",&haftaninGunu);
+
+    switch(haftaninGunu){
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        printf("Haftaici!\n"); // 1-5 araliginin tamami ayni ciktiyi verecegi printf fonk. sadece case 5 icin yazilabilir.
+    break;
+        case 6:
+        case 7:
+        printf("Haftasonu!\n");
+    break;
+
+    default:
+        printf("Yanlis bir deger girdiniz!");
+    }
+
+    return 0;
+}
